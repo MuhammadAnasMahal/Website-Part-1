@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>navigation</title>
+      <style>
+        body{
+            margin:0;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: lightgreen
+
+        }
+        .topnav a{
+            float:left;
+            color: rgb(128, 65, 216);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+
+        }
+        .topnav{
+            overflow:hidden;
+            background-color: rgb(13, 159, 66);
+
+        }
+        .topnav a:hover{
+            background-color: blanchedalmond;
+            color: cadetblue;
+        }
+        .topnav a.active{
+            background-color: lightgoldenrodyellow;
+            color: rgb(62, 91, 154);
+        }
+      </style>
+    </head>
+    <body>
+        <div class = "topnav">
+            <a href = "index.HTML">Airplane</a>
+            <a href = "about.html">Types of Planes</a>
+            <a href = "index.HTML">Designs</a>
+            <a href = "index.HTML">About</a>
+        </div>
+<div class = "carouselcontainer">
+<img class = "myslides" alt = "Airplane1" src = "Airplane1.jpeg" height = "300" width = "300">
+<img class = "myslides" alt = "Airplane2" src ="Airplane2.png"  height = "300" width = "300">
+<img class = "myslides" alt = "Airplan3" src ="Airplane3.webp"  height = "300" width = "300">
+<img alt = "Airplan4" class = "myslides" src = "Airplane4.jpeg" height = "300" width = "300">
+</div>
+<script>
+    var index = "0"
+function carousel(){
+    var i;
+    var x = document.getElementsByClassName("myslides");
+    for(i=0; i < x.length; i++)
+    {
+        x [i].style.display = "none";
+    }
+    index ++;
+    if (index > x.length)
+        index = 1;
+    x[index-1].style.display = "block";
+   setTimeout(carousel, 2000)
+}
+carousel();
+</script>
+</html>
